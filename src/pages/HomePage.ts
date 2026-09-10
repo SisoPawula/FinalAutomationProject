@@ -7,6 +7,13 @@ export class HomePage extends BasePage {
          return this.page.getByRole('heading', { name: /Welcome\s*back/i });
     }
 
+
+    async updateMyProfile() {
+        await this.basePageClickElement(this.page.getByRole('button', {name: 'Menu'}));
+        await this.basePageClickElement(this.page.getByRole('button', {name: 'My Profile'}));
+
+    }
+
     
 
 }

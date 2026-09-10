@@ -18,4 +18,6 @@ export class LoginPage extends BasePage {
         await this.basePageEnterText(this.page.locator('#login-password'), password);
         await this.basePageClickElement(this.page.locator('xpath=//button[contains(.,"Login")]'));
     }
+
+    
 }
