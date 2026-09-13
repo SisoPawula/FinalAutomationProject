@@ -1,5 +1,6 @@
 import {expect, test} from '../src/fixtures/CustormFixtures';
 import {LoginUser} from '../src/data/TestData';
+import { readCsv } from '../src/utils/CsvReader';
 
 
 test.describe('Profile Update Tests', ()=>{
