@@ -1,7 +1,7 @@
 export const LoginUser = {
     UserDetails: {
-        username: 'pawula02@gmail.com',
-        password: 'SeePic88',
+       username: 'playtest@gmail.com',
+        password: '1234567!',
         
     },
 

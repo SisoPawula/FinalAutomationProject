@@ -13,12 +13,12 @@ export class ProfilePage extends BasePage{
 
     async updateMyProfilePhoto(){
         await this.basePageClickElement(this.page.getByRole('button', {name: 'Edit Profile'}));
-        await expect(this.page.getByPlaceholder('#e.g., +27 123 456 7890')).toBeVisible();      
+        await expect(this.page.getByPlaceholder('e.g., +27 123 456 7890').first()).toBeVisible();
     }
 
     async saveProfilePhoto(){
         await this.page.getByText('Choose Photo').click();
-        await this.page.locator('input[type="file"]').setInputFiles("C:\Users\USER\Downloads\profile picture.jpeg");
+        await this.page.locator('input[type="file"]').setInputFiles(String.raw`C:\Users\USER\Downloads\screenshot.png`);
         await expect(this.page.locator('img').first()).toBeVisible();
         await this.basePageClickElement(this.page.getByRole('button', {name: 'Save Changes'}))
         
