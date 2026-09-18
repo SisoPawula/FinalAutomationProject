@@ -1,18 +1,18 @@
-//import fs from 'fs';
-//import {parse} from 'csv-parse/sync';
+import fs from 'fs';
+import {parse} from 'csv-parse/sync';
 
 
-//export interface CsvRecord {
-    //[key: string]: string;
-//}
+export interface CsvRecord {
+    [key: string]: string;
+}
 
-//export function readCsv(filePath: string): CsvRecord[] {
-   // const fileContent = fs.readFileSync(filePath, 'utf-8');
+export function readCsv(filePath: string): CsvRecord[] {
+   const fileContent = fs.readFileSync(filePath, 'utf-8');
 
-    //return parse(fileContent, {
-       // columns: true,
-        //skip_empty_lines: true,
-        //delimiter:  ';'
+    return parse(fileContent, {
+        columns: true,
+        skip_empty_lines: true,
+        delimiter:  ';'
         
-   // });
-//}
+    });
+}
