@@ -12,7 +12,7 @@ export function readCsv(filePath: string): CsvRecord[] {
     return parse(fileContent, {
         columns: true,
         skip_empty_lines: true,
-        delimiter:  ';'
+        delimiter: ','
         
     });
 }

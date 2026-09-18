@@ -19,5 +19,11 @@ export class LoginPage extends BasePage {
         await this.basePageClickElement(this.page.getByRole('button', { name: 'Login', exact: true }));
     }
 
+     async  FullLogin (username: string, password: string) {
+        await this.basePageGoToUrl('/');
+        await this.navigateToLoginPage();
+        await this. userLogin(username, password);
+    }
+
     
 }
