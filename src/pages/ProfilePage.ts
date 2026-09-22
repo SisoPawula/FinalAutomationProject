@@ -18,7 +18,7 @@ export class ProfilePage extends BasePage{
 
     async saveProfilePhoto(){
         await this.page.getByText('Choose Photo').click();
-        await this.page.locator('input[type="file"]').setInputFiles(String.raw`C:\Users\USER\Downloads\screenshot.png`);
+        await this.page.locator('input[type="file"]').setInputFiles("C:\\Users\\USER\\Downloads\\profilepicture.jpeg");
         await expect(this.page.locator('img').first()).toBeVisible();
         await this.basePageClickElement(this.page.getByRole('button', {name: 'Save Changes'}))
         
