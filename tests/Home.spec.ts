@@ -19,7 +19,6 @@ test('Upload Profile Picture', async ({loginPage, homePage, profilePage, page}) 
    // await loginPage.basePageGoToUrl('/');
    // await loginPage.navigateToLoginPage();
     await loginPage.FullLogin(LoginUser.UserDetails.username, LoginUser.UserDetails.password);
-    await page.screenshot({path: 'loginPicture.png', fullPage: true});
      await homePage.verifyHomeIsDisplayed();
     await homePage.updateMyProfile();
     await profilePage.verifyProfilePageIsDisplayed();
