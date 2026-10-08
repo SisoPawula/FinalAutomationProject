@@ -23,8 +23,8 @@ test('Upload Profile Picture', async ({loginPage, homePage, profilePage, page}) 
     await homePage.updateMyProfile();
     await profilePage.verifyProfilePageIsDisplayed();
     await profilePage.updateMyProfilePhoto();
-   await page.screenshot({path: 'UploadedPicture.png', fullPage: true});
-    await profilePage.saveProfilePhoto();
+    await profilePage.saveProfilePhoto('C:\\Users\\USER\\Downloads\\profilepicture.jpeg');
+    await page.screenshot({path: 'UploadedPicture.png', fullPage: true});
 
 
 });
